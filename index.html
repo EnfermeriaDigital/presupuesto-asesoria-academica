@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Presupuesto Base de Asesoría Académica - Lic. Alejandra Ortiz</title>
+    <style>
+        :root {
+            --primary: #18bc9c;
+            --secondary: #2c3e50;
+            --whatsapp: #25D366;
+            --whatsapp-hover: #128C7E;
+            --bg-color: #f4f7f6;
+            --card-bg: #ffffff;
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: var(--bg-color);
+            padding: 15px; /* Padding pequeño ideal para celular */
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .header {
+            text-align: center;
+            padding: 25px 15px;
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin-bottom: 20px;
+        }
+        .header h1 {
+            color: var(--secondary);
+            font-size: 1.4rem;
+            margin-bottom: 5px;
+        }
+        .header p {
+            color: #7f8c8d;
+            font-size: 0.95rem;
+        }
+        .section {
+            background-color: var(--card-bg);
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: var(--primary);
+            font-size: 1.2rem;
+            border-bottom: 2px solid #ecf0f1;
+            padding-bottom: 8px;
+            margin-bottom: 15px;
+        }
+        p {
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+        }
+        .pricing-container {
+            display: flex;
+            flex-direction: column; /* En celular se apilan una debajo de la otra */
+            gap: 20px;
+        }
+        .pricing-card {
+            background-color: var(--card-bg);
+            border: 2px solid #ecf0f1;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s, border-color 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+        .premium {
+            border-color: var(--primary);
+            background-color: #f0fbf9;
+        }
+        .premium-badge {
+            background-color: var(--primary);
+            color: white;
+            font-size: 0.75rem;
+            font-weight: bold;
+            padding: 4px 15px;
+            position: absolute;
+            top: 15px;
+            right: -25px;
+            transform: rotate(45deg);
+            width: 100px;
+            text-align: center;
+            letter-spacing: 1px;
+        }
+        .pricing-card h3 {
+            color: var(--secondary);
+            font-size: 1.25rem;
+            margin-bottom: 5px;
+        }
+        .price {
+            font-size: 1.8rem;
+            color: var(--primary);
+            font-weight: bold;
+            margin: 15px 0;
+        }
+        .features {
+            list-style-type: none;
+            text-align: left;
+            margin-bottom: 20px;
+        }
+        .features li {
+            margin-bottom: 12px;
+            padding-left: 28px;
+            position: relative;
+            font-size: 0.95rem;
+        }
+        .features li::before {
+            content: "✓";
+            color: var(--primary);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+        .btn {
+            display: block; /* Botón ancho completo en celular */
+            width: 100%;
+            background-color: var(--whatsapp);
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1rem;
+            transition: background-color 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        .btn:hover {
+            background-color: var(--whatsapp-hover);
+        }
+        .btn svg {
+            width: 22px;
+            height: 22px;
+            fill: currentColor;
+        }
+
+        /* Ajustes para tabletas y computadoras */
+        @media (min-width: 768px) {
+            body { padding: 30px; }
+            .header h1 { font-size: 2rem; }
+            h2 { font-size: 1.5rem; }
+            .pricing-container { flex-direction: row; }
+            .pricing-card { flex: 1; padding: 30px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>⚕️ Lic. Alejandra Ortiz 💻</h1>
+            <p>Asesoría Académica & Herramientas Digitales Avanzadas</p>
+        </div>
+
+        <div class="section">
+            <h2>Presupuesto Base de Servicios Académicos</h2>
+            <p>Servicios de asesoría, creación, edición y adecuación de proyectos de investigación y trabajos académicos, según el tema de estudio, la etapa de desarrollo y los requisitos de cada institución.</p>
+            <p>Este presupuesto incluye dos opciones: la elaboración de un proyecto de investigación y la opción Premium, que ofrece un <strong>combo completo de dos trabajos: proyecto de investigación + tesis final</strong>. El combo también incluye la elaboración de un artículo científico derivado de la investigación.</p>
+        </div>
+
+        <div class="section">
+            <h2>Plan de Trabajo</h2>
+            <ul class="features">
+                <li><strong>Formato y Normas Institucionales:</strong> Creación, edición y adecuación del documento según la guía solicitada por la institución. Ajuste de márgenes, interlineado, sangrías, numeración, citas y referencias bibliográficas conforme a APA, Vancouver u otro modelo requerido.</li>
+                <li><strong>Tablas e Índices:</strong> Corrección visual y generación automática.</li>
+                <li><strong>Resumen Científico:</strong> Redacción estructurada (Objetivo, Metodología, etc.).</li>
+                <li><strong>Presupuesto y Cronograma:</strong> Tabla de costos y diagrama de Gantt.</li>
+                <li><strong>Instrumento Digital Exclusivo:</strong> Diseño y desarrollo mediante programación de un instrumento de recolección de datos a medida, creado específicamente para los objetivos, las variables y las necesidades de cada investigación.</li>
+                <li><strong>Defensa:</strong> Diseño de PowerPoint (PPTX) interactivo.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Elige tu Opción</h2>
+            <p>Toca el botón de la opción que prefieras para enviarme un mensaje directo a WhatsApp.</p>
+
+            <div class="pricing-container">
+                <!-- Opción 1 -->
+                <div class="pricing-card">
+                    <h3>1. Solo Proyecto</h3>
+                    <p>Creación y desarrollo del proyecto o protocolo de investigación: el documento que organiza qué se investigará, por qué y cómo se realizará el estudio. Incluye su redacción, edición y adecuación al formato solicitado por la institución para la presentación inicial; no incluye el desarrollo de la tesis final.</p>
+                    <div class="price">1.050.000 Gs.</div>
+                    <ul class="features">
+                        <li>Creación, redacción y edición del proyecto según la estructura y el formato exigidos por la institución</li>
+                        <li>Desarrollo del título, planteamiento del problema, preguntas de investigación, justificación y objetivos</li>
+                        <li>Elaboración de antecedentes, marco teórico y metodología: diseño del estudio, población, muestra, variables, técnicas e instrumentos de recolección de datos y consideraciones éticas, según corresponda</li>
+                        <li>Redacción del resumen del proyecto, cuando lo requiera la institución</li>
+                        <li>Organización de citas, referencias bibliográficas, anexos, tablas e índices según las normas solicitadas</li>
+                        <li>Elaboración del presupuesto de investigación y cronograma de actividades con diagrama de Gantt</li>
+                        <li>Desarrollo mediante programación de un instrumento digital exclusivo, adaptado a la investigación</li>
+                        <li>Diseño de presentación en PowerPoint (PPTX) para la exposición del proyecto</li>
+                    </ul>
+                    <a href="https://wa.me/595981465600?text=Hola%20Lic.%20Alejandra,%20he%20revisado%20el%20presupuesto%20y%20quiero%20avanzar%20con%20la%20*Opción%201%20(Solo%20Proyecto%20-%201.050.000%20Gs)*.%20¿Cómo%20hacemos%20con%20el%20anticipo?" class="btn" target="_blank">
+                        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.305-.885-.656-1.482-1.466-1.656-1.764-.173-.298-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+                        Elegir Opción 1
+                    </a>
+                </div>
+
+                <!-- Opción 2 -->
+                <div class="pricing-card premium">
+                    <div class="premium-badge">COMBO</div>
+                    <h3>2. Premium</h3>
+                    <p>Combo completo de dos trabajos: proyecto de investigación + tesis final, con elaboración de un artículo científico derivado de la investigación.</p>
+                    <div class="price">3.000.000 Gs.</div>
+                    <ul class="features">
+                        <li><strong>Todo lo de la Opción 1</strong></li>
+                        <li>Asesoría y elaboración de Tesis Final</li>
+                        <li>Análisis de resultados</li>
+                        <li>Elaboración de un artículo científico derivado de la investigación, con estructura y formato adaptados a los requisitos de la institución o de la revista seleccionada</li>
+                        <li>Cambios, correcciones y modificaciones del proyecto y de la tesis solicitados por el tutor durante el proceso de elaboración y revisión</li>
+                        <li>Revisión de estilo final</li>
+                        <li>PPTX para defensa final</li>
+                    </ul>
+                    <a href="https://wa.me/595981465600?text=Hola%20Lic.%20Alejandra%2C%20he%20revisado%20el%20presupuesto%20y%20quiero%20avanzar%20con%20el%20Combo%20Premium%20%28Proyecto%20%2B%20Tesis%20%2B%20Art%C3%ADculo%20cient%C3%ADfico%20-%203.000.000%20Gs%29.%20%C2%BFC%C3%B3mo%20hacemos%20con%20el%20anticipo%3F" class="btn" target="_blank">
+                        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.305-.885-.656-1.482-1.466-1.656-1.764-.173-.298-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+                        Elegir Premium
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Condiciones de Trabajo</h2>
+            <ul class="features">
+                <li><strong>Anticipo:</strong> 50% para iniciar oficialmente con los trabajos.</li>
+                <li><strong>Cancelación:</strong> 50% restante contra entrega del documento.</li>
+                <li><strong>Pagos:</strong> Transferencia bancaria o billetera virtual.</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
